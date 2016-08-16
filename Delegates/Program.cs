@@ -13,6 +13,7 @@ namespace Delegates
             MyDelegate d;
 
             d = DoSomething;
+            d += DoSomethingElse;
 
             d("This is a delegate");
 
@@ -25,8 +26,12 @@ namespace Delegates
             Console.WriteLine(text);
         }
 
-        
+        static public void DoSomethingElse(string text)
+        {
+            text = "HAH! I changed your string :P This is the extra function, even though I ran the delegate once.";
+            Console.WriteLine(text);
+        }
 
-       
+
     }
 }
